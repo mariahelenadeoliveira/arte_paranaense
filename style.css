@@ -1,1 +1,16 @@
-
+body{
+    background-color:rgb(255, 192, 203);
+    color: #1940BF;
+}
+header{
+    background-color: bisque;
+    color:aquamarine;
+}
+section{
+    background-color: #1940BF;
+    color:blueviolet
+}
+footer{
+    background-color: brown;
+    color: whitesmoke;
+}
