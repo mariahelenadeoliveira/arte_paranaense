@@ -1,16 +1,16 @@
 body{
     background-color:rgb(255, 192, 203);
-    color: #1940BF;
+    color:#1940BF;
 }
 header{
-    background-color: bisque;
-    color:aquamarine;
+    background-color: rgb(255, 192, 203);
+    color:#1940BF;
 }
 section{
-    background-color: #1940BF;
-    color:blueviolet
+    background-color: rgb(255, 192, 203);
+    color:#1940BF;
 }
 footer{
-    background-color: brown;
-    color: whitesmoke;
+    background-color: rgb(255, 192, 203);
+    color:#1940BF;
 }
