@@ -30,6 +30,10 @@ header p {
     color: #E0EED0;
 }
 
+main {
+    display: block;
+}
+
 section {
     background-color: #FFFFFF;
     max-width: 800px;
@@ -50,15 +54,24 @@ section h3 {
     color: #1E4620;
     margin-top: 20px;
     margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+section p {
+    margin-bottom: 15px;
 }
 
 section ul {
     margin-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 section li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+section strong {
+    color: #3E2723;
 }
 
 .galeria-grid, .mural-estudante {
@@ -68,34 +81,4 @@ section li {
     margin-top: 20px;
 }
 
-.item-galeria, .item-mural {
-    background-color: #F7F5F0;
-    border: 1px solid #E0EED0;
-    border-radius: 6px;
-    padding: 15px;
-    text-align: center;
-}
-
-.playlist-audio, .video-container {
-    background-color: #F7F5F0;
-    padding: 20px;
-    border-radius: 6px;
-    margin-top: 15px;
-    border: 1px dashed #8B4513;
-}
-
-footer {
-    background-color: #3E2723;
-    color: #F7F5F0;
-    text-align: center;
-    padding: 20px;
-    margin-top: 60px;
-    font-size: 0.9rem;
-}
-
-footer a {
-    color: #E0EED0;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-}
+.item-galeria,
