@@ -46,6 +46,44 @@ section h2 {
     font-size: 1.8rem;
 }
 
+section h3 {
+    color: #1E4620;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+section ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+section li {
+    margin-bottom: 8px;
+}
+
+.galeria-grid, .mural-estudante {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.item-galeria, .item-mural {
+    background-color: #F7F5F0;
+    border: 1px solid #E0EED0;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+}
+
+.playlist-audio, .video-container {
+    background-color: #F7F5F0;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 15px;
+    border: 1px dashed #8B4513;
+}
+
 footer {
     background-color: #3E2723;
     color: #F7F5F0;
@@ -53,4 +91,11 @@ footer {
     padding: 20px;
     margin-top: 60px;
     font-size: 0.9rem;
+}
+
+footer a {
+    color: #E0EED0;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
 }
