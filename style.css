@@ -80,3 +80,11 @@ section strong {
     gap: 20px;
     margin-top: 20px;
 }
+footer{
+    background-color: #1E4620 ;
+    color:#000000;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+
+}
