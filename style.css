@@ -88,6 +88,16 @@ section p {
     text-align: justify;
 }
 
+/* Letra grande SOMENTE na primeira letra do primeiro parágrafo da PRIMEIRA seção */
+section:first-of-type p:first-of-type::first-letter {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #8B4513;
+    float: left;
+    line-height: 1;
+    margin-right: 8px;
+}
+
 section ul {
     margin-left: 20px;
     margin-bottom: 25px;
