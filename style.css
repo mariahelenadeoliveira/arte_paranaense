@@ -55,13 +55,13 @@ main {
 
 section {
     background-color: #FFFFFF;
-    max-width: 1000px; /* Largura aumentada para dar mais espaço aos textos e imagens */
+    max-width: 1000px;
     margin: 40px auto;
-    padding: 35px 40px; /* Espaçamento interno ampliado */
+    padding: 35px 40px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     border-left: 6px solid #1E4620;
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Efeito suave ao passar o mouse */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 section:hover {
@@ -85,17 +85,7 @@ section h3 {
 
 section p {
     margin-bottom: 15px;
-    text-align: justify; /* Textos organizados e alinhados */
-}
-
-/* Letra capitular para o primeiro parágrafo de cada seção */
-section p:first-of-type::first-letter {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #8B4513;
-    float: left;
-    line-height: 1;
-    margin-right: 8px;
+    text-align: justify;
 }
 
 section ul {
