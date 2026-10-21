@@ -36,29 +36,37 @@ main {
 
 section {
     background-color: #FFFFFF;
-    max-width: 800px;
+    max-width: 1000px; /* Largura aumentada para dar mais espaço aos textos e imagens */
     margin: 40px auto;
-    padding: 30px;
+    padding: 35px 40px; /* Espaçamento interno ampliado */
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     border-left: 6px solid #1E4620;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Efeito suave ao passar o mouse */
+}
+
+section:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 section h2 {
     color: #8B4513;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-size: 1.8rem;
+    border-bottom: 2px solid #F7F5F0;
+    padding-bottom: 8px;
 }
 
 section h3 {
     color: #1E4620;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 10px;
     font-size: 1.4rem;
 }
 
 section p {
     margin-bottom: 15px;
+    text-align: justify; /* Textos organizados e alinhados */
 }
 
 section ul {
@@ -74,24 +82,63 @@ section strong {
     color: #3E2723;
 }
 
+/* Estilização para as div das seções */
+section div {
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+/* Centralização do Bloco de Imagem e Legenda */
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    text-align: center;
+    max-width: 100%;
+}
+
+/* Centralização e Ajustes da Imagem */
+figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    border: 3px solid #FFFFFF;
+}
+
+/* Legenda das Imagens */
+figcaption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555555;
+    font-style: italic;
+    text-align: center;
+}
+
 .galeria-grid, .mural-estudante {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
-footer{
-    background-color: #1E4620 ;
-    color:#ffffff;
+
+footer {
+    background-color: #1E4620;
+    color: #ffffff;
     text-align: center;
     padding: 20px;
     margin-top: 30px;
+}
 
 .card {
-    background-color: var(--cor-card);
+    background-color: var(--cor-card, #F7F5F0);
     padding: 15px;
     margin: 15px 0;
-    border-left: 6px solid var(--cor-principal);
+    border-left: 6px solid var(--cor-principal, #1E4620);
     border-radius: 10px;
     flex: 1 1 300px;
 }
@@ -100,7 +147,6 @@ footer{
     margin-top: 0;
 }
 
-}
 button {
     background-color: pink;
     color: white;
@@ -108,9 +154,11 @@ button {
     padding: 10px 15px;
     border-radius: 8px;
     cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-button :hover {
+button:hover {
     background-color: rgb(206, 80, 101);
 }
 
@@ -119,4 +167,3 @@ button :hover {
     width: fit-content;
     margin: 20px auto;
 }
-
