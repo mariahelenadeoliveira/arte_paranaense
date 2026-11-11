@@ -1,4 +1,4 @@
-:root{
+:root {
     --cor-fundo: #F7F5F0;
     --cor-texto: #2C3E2B;
     --cor-principal: #1E4620;
@@ -15,8 +15,13 @@
     --cor-fundo: #121212;
     --cor-texto: #f5f5f5;
     --cor-principal: #1E4620;
+    --cor-secundaria: #d27d3d;
+    --cor-hover: #2a5e2d;
     --cor-superficie: #1e1e1e;
     --cor-card: #2b2530;
+    --cor-legenda: #b0b0b0;
+    --cor-clara: #333333;
+    --cor-rodape: #121212;
 }
 
 * {
@@ -26,18 +31,19 @@
 }
 
 body {
-    background-color: #F7F5F0;
-    color: #2C3E2B;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {
-    background-color: #1E4620;
+    background-color: var(--cor-principal);
     color: #FFFFFF;
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 5px solid #8B4513;
+    border-bottom: 5px solid var(--cor-secundaria);
 }
 
 header h1 {
@@ -48,7 +54,7 @@ header h1 {
 
 header p {
     font-style: italic;
-    color: #E0EED0;
+    color: var(--cor-clara);
 }
 
 /* Estilização dos links do menu no cabeçalho */
@@ -57,7 +63,7 @@ header nav {
 }
 
 header nav a {
-    color: #E0EED0;
+    color: var(--cor-clara);
     text-decoration: none;
     margin: 0 12px;
     font-weight: 600;
@@ -74,15 +80,17 @@ main {
     display: block;
 }
 
+/* Aumento de largura para preencher mais o fundo da tela */
 section {
-    background-color: #FFFFFF;
-    max-width: 1000px;
+    background-color: var(--cor-superficie);
+    max-width: 1250px;
+    width: 92%;
     margin: 40px auto;
     padding: 35px 40px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    border-left: 6px solid #1E4620;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-left: 6px solid var(--cor-principal);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
 }
 
 section:hover {
@@ -90,18 +98,22 @@ section:hover {
 }
 
 section h2 {
-    color: #8B4513;
+    color: var(--cor-secundaria);
     margin-bottom: 20px;
     font-size: 1.8rem;
-    border-bottom: 2px solid #F7F5F0;
+    border-bottom: 2px solid var(--cor-fundo);
     padding-bottom: 8px;
 }
 
 section h3 {
-    color: #1E4620;
+    color: var(--cor-principal);
     margin-top: 25px;
     margin-bottom: 10px;
     font-size: 1.4rem;
+}
+
+.tema-escuro section h3 {
+    color: #4CAF50;
 }
 
 section p {
@@ -109,11 +121,11 @@ section p {
     text-align: justify;
 }
 
-/* Letra grande SOMENTE na primeira letra do primeiro parágrafo da PRIMEIRA seção */
-section:first-of-type p:first-of-type::first-letter {
+/* Letra grande estritamente para o primeiro parágrafo da PRIMEIRA seção do site */
+section:first-of-type > p:first-of-type::first-letter {
     font-size: 2.8rem;
     font-weight: bold;
-    color: #8B4513;
+    color: var(--cor-secundaria);
     float: left;
     line-height: 1;
     margin-right: 8px;
@@ -129,7 +141,7 @@ section li {
 }
 
 section strong {
-    color: #3E2723;
+    color: var(--cor-secundaria);
 }
 
 /* Estilização para as div das seções */
@@ -140,12 +152,12 @@ section div {
 
 /* Blocos de citação ou destaques de texto */
 blockquote {
-    background-color: #F7F5F0;
-    border-left: 4px solid #8B4513;
+    background-color: var(--cor-fundo);
+    border-left: 4px solid var(--cor-secundaria);
     padding: 12px 20px;
     margin: 20px 0;
     font-style: italic;
-    color: #1E4620;
+    color: var(--cor-principal);
     border-radius: 0 8px 8px 0;
 }
 
@@ -184,14 +196,14 @@ figure img {
     margin: 0 auto;
     border-radius: 8px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
-    border: 4px solid #F7F5F0;
+    border: 4px solid var(--cor-fundo);
 }
 
 /* Legenda das Imagens */
 figcaption {
     margin-top: 10px;
     font-size: 0.9rem;
-    color: #555555;
+    color: var(--cor-legenda);
     font-style: italic;
     text-align: center;
 }
@@ -203,21 +215,52 @@ figcaption {
     margin-top: 20px;
 }
 
+/* Ajuste específico para colocar os dois textos de curiosidades LADO A LADO */
+.cards-curiosidades {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    margin-top: 20px;
+}
+
+.item-curiosidade {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.item-curiosidade h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.item-curiosidade p {
+    margin-bottom: 0;
+}
+
 footer {
-    background-color: #1E4620;
+    background-color: var(--cor-rodape);
     color: #ffffff;
     text-align: center;
     padding: 20px;
     margin-top: 30px;
 }
 
+footer a {
+    color: var(--cor-clara);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 .card {
-    background-color: var(--cor-card, #F7F5F0);
+    background-color: var(--cor-card);
     padding: 15px;
     margin: 15px 0;
-    border-left: 6px solid var(--cor-principal, #1E4620);
+    border-left: 6px solid var(--cor-principal);
     border-radius: 10px;
-    flex: 1 1 300px;
 }
 
 .card h3 {
@@ -225,35 +268,28 @@ footer {
 }
 
 button {
-    background-color: pink;
+    background-color: #E91E63;
     color: white;
     border: none;
     padding: 10px 15px;
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
 button:hover {
-    background-color: rgb(206, 80, 101);
+    background-color: #C2185B;
+}
+
+button:active {
+    transform: scale(0.98);
 }
 
 .curtir {
     display: block;
     width: fit-content;
     margin: 20px auto;
-}
-
-/* Ajustes de responsividade para celulares */
-@media (max-width: 768px) {
-    .conteudo-flex {
-        flex-direction: column;
-    }
-
-    section {
-        padding: 20px;
-    }
 }
 
 .btn-temaa {
@@ -264,5 +300,32 @@ button:hover {
     height: 50px;
     border-radius: 50%;
     font-size: 22px;
+    background-color: var(--cor-secundaria);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
 
+.btn-temaa:hover {
+    background-color: var(--cor-principal);
+}
+
+/* Ajustes de responsividade para celulares */
+@media (max-width: 768px) {
+    .conteudo-flex {
+        flex-direction: column;
+    }
+
+    .cards-curiosidades {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 20px;
+        margin: 20px 10px;
+        width: auto;
+    }
 }
